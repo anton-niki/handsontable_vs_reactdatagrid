@@ -9,10 +9,10 @@ export default function BasicExample() {
   return (
     <Router>
       <section>
-        <p style={{textAlign:'right'}}><a target="_blank" href="https://github.com/WranglHQ/handsontable_vs_reactdatagrid">https://github.com/WranglHQ/handsontable_vs_reactdatagrid</a></p>
+        <p style={{ textAlign: 'right' }}><a target="_blank" href="https://github.com/WranglHQ/handsontable_vs_reactdatagrid">https://github.com/WranglHQ/handsontable_vs_reactdatagrid</a></p>
         <p></p>
-        <h2>compare handsontable with adazzle's react-data-grid with different numbers of rows</h2>
-        <p>try 500,000</p>
+        <h2>compare handsontable with adazzle's react-data-grid with a ton of rows</h2>
+        <p>try 500,000 or 5,000,000</p>
         <input
           style={{ width: '250px' }}
           type='text'
@@ -45,11 +45,7 @@ export default function BasicExample() {
 }
 
 function Home() {
-  return (
-    <div>
-      {/* <h2>compare handsontable with react-data-grid with different numbers of rows. try 500,000</h2> */}
-    </div>
-  );
+  return (<div></div>);
 }
 
 function About() {

@@ -12,6 +12,10 @@ class InnerHandsontable extends React.Component {
                 colHeaders={true}
                 licenseKey={"non-commercial-and-evaluation"}
                 id={"hot"}
+                colWidths= {[30, 45, 60, 75]}
+                autoColumnSize={false}
+                autoRowSize={false}
+                viewportRowRenderingOffset={0}
             />
         );
     }

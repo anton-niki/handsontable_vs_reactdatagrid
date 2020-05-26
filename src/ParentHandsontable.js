@@ -23,6 +23,7 @@ class ParentHandsontable extends React.Component {
                     change first cell
                 </button>
                 <InnerHandsontable dataprop={this.state.data}></InnerHandsontable>
+                <p>* <a target="_blank" href="https://handsontable.com/docs/7.4.2/tutorial-performance-tips.html">optimized</a> with fixed <code>colWidths</code> and disabled <code>autoColumnSize</code> and <code>autoRowSize</code></p>
             </div>
         );
     }
