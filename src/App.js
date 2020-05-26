@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import ParentHandsontable from './ParentHandsontable';
 import ParentReactDataGrid from './ParentReactDataGrid';
+import HandsontableRedux from './HandsontableRedux';
 
 export default function BasicExample() {
   return (
@@ -13,7 +14,7 @@ export default function BasicExample() {
         <h2>compare handsontable with adazzle's react-data-grid with different numbers of rows</h2>
         <p>try 500,000</p>
         <input
-          style={{  width: '250px' }}
+          style={{ width: '250px' }}
           type='text'
           placeholder="num rows (default 50,000)"
           id="numrowsinputid">
@@ -24,6 +25,8 @@ export default function BasicExample() {
           <li><Link to="/handsontable">Handsontable</Link></li>
           <li><Link to="/react-data-grid">AdazzleReactDataGrid</Link></li>
           <p></p>
+          <Link to="/handsontable_redux"><span style={{ color: 'gray' }}>Handsontable redux</span></Link><span style={{ color: 'gray' }}> (doesnt work. from their <a target="_blank" href="https://handsontable.com/docs/7.4.2/frameworks-wrapper-for-react-redux-example.html">docs</a>)</span>
+          <p></p>
         </ul>
       </section>
       <hr style={{ margin: 0 }} />
@@ -33,6 +36,7 @@ export default function BasicExample() {
           <Route exact path="/"><Home /></Route>
           <Route path="/handsontable"><ParentHandsontable /></Route>
           <Route path="/react-data-grid"><ParentReactDataGrid /></Route>
+          <Route path="/handsontable_redux"><HandsontableRedux /></Route>
         </Switch>
       </section>
 
