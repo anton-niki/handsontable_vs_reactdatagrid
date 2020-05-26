@@ -17,7 +17,7 @@ class ParentHandsontable extends React.Component {
     render() {
         return (
             <div>
-                <h2>handsontable</h2>
+                <h2>Handsontable</h2>
                 <div>num rows: {this.state.data.numRows} </div>
                 <button style={{ height: '50px', width: '100px', margin: '10px', cursor: 'pointer' }} onClick={this.updateData}>
                     change first cell

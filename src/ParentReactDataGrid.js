@@ -17,7 +17,7 @@ class ParentReactDataGrid extends React.Component {
     render() {
         return (
             <div>
-                <h2>adazzle's react-data-grid</h2>
+                <h2>Adazzle's react-data-grid</h2>
                 <div>num rows: {this.state.data.numRows} </div>
                 <button style={{ height: '50px', width: '100px', margin: '10px', cursor: 'pointer' }} onClick={this.updateData}>
                     <span>change first cell</span>

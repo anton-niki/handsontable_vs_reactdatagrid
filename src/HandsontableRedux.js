@@ -107,6 +107,7 @@ class HandsontableRedux extends React.Component {
     render() {
         return (
             <div className="redux-example-container">
+                <h1>Handsontable redux</h1>
                 <div id="example-container">
                     <div id="example-preview" className="hot">
                         <div id="toggle-boxes">
