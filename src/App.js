@@ -12,14 +12,13 @@ export default function BasicExample() {
         <p></p>
         <h2>compare handsontable with adazzle's react-data-grid with different numbers of rows</h2>
         <p>try 500,000</p>
-        <p>change spreadsheet after changing number of rows to re-render the components</p>
         <input
-          style={{ marginLeft: '40px', width: '250px' }}
+          style={{  width: '250px' }}
           type='text'
           placeholder="num rows (default 50,000)"
           id="numrowsinputid">
         </input>
-        <p></p>
+        <p>change spreadsheet after changing number of rows to re-render the components:</p>
         <ul>
           {/* <li><Link to="/">Home</Link></li> */}
           <li><Link to="/handsontable">Handsontable</Link></li>
