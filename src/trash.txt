@@ -1,0 +1,26 @@
+
+// window.wd = Handsontable.helper.createSpreadsheetData(60, 10);
+
+const columns = [
+    { key: 'id', name: 'ID' },
+    { key: 'c1', name: 'c1' },
+    { key: 'c2', name: 'c2' },
+    { key: 'c3', name: 'c3' }
+];
+
+const rows = [
+    { id: 0, c1: 'val1', c2: 'val1', c3: 'val1' },
+    { id: 0, c1: 'val1', c2: 'val1', c3: 'val1' },
+    { id: 0, c1: 'val1', c2: 'val1', c3: 'val1' },
+    { id: 0, c1: 'val1', c2: 'val1', c3: 'val1' },
+    { id: 0, c1: 'val1', c2: 'val1', c3: 'val1' },
+    { id: 0, c1: 'val1', c2: 'val1', c3: 'val1' },
+    { id: 0, c1: 'val1', c2: 'val1', c3: 'val1' },
+    { id: 0, c1: 'val1', c2: 'val1', c3: 'val1' },
+    { id: 0, c1: 'val1', c2: 'val1', c3: 'val1' },
+    { id: 0, c1: 'val1', c2: 'val1', c3: 'val1' },
+    { id: 0, c1: 'val1', c2: 'val1', c3: 'val1' },
+    { id: 0, c1: 'val1', c2: 'val1', c3: 'val1' },
+    { id: 0, c1: 'val1', c2: 'val1', c3: 'val1' },
+    { id: 0, c1: 'val1', c2: 'val1', c3: 'val1' },
+];

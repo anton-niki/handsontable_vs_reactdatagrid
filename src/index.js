@@ -3,6 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Handsontable from 'handsontable';
+
+
+// window.wd  = Handsontable.helper.createSpreadsheetData(60, 10);
+// window.wd = {};
+
+
+// window.wd = [
+//   ["", "Ford", "Volvo", "Toyota", "Honda"],
+//   ["2016", 10, 11, 12, 13],
+//   ["2017", 20, 11, 14, 13],
+//   ["2018", 30, 15, 12, 13]
+// ];
 
 ReactDOM.render(
   <React.StrictMode>
