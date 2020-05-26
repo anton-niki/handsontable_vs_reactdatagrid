@@ -4,7 +4,7 @@ import getData from './data.js';
 import InnerReactDataGrid from "./InnerReactDataGrid";
 
 class ParentReactDataGrid extends React.Component {
-    
+
     state = { data: getData() }
 
     updateData = () => {
@@ -13,15 +13,16 @@ class ParentReactDataGrid extends React.Component {
         row0.id = row0.id + 1;
         this.setState({ data: { ...this.state.data, rows: [row0, ...rows.splice(1)] } });
     }
-    
+
     render() {
         return (
             <div>
-                <div>num rows: {this.state.data.numRows} </div><p></p>
-                <InnerReactDataGrid dataprop={this.state.data}></InnerReactDataGrid>
+                <h2>adazzle's react-data-grid</h2>
+                <div>num rows: {this.state.data.numRows} </div>
                 <button style={{ height: '50px', width: '100px', margin: '10px', cursor: 'pointer' }} onClick={this.updateData}>
-                    change first cell
+                    <span>change first cell</span>
                 </button>
+                <InnerReactDataGrid dataprop={this.state.data}></InnerReactDataGrid>
             </div>
         );
     }

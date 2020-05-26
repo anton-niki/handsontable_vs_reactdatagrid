@@ -7,23 +7,36 @@ import ParentReactDataGrid from './ParentReactDataGrid';
 export default function BasicExample() {
   return (
     <Router>
-      <p></p>
-
-      <input style={{ marginLeft: '40px', width:'250px' }} type='text' placeholder="num rows (default 50000)" id="numrowsinputid"></input>
-      <p></p>
-      <ul>
-        {/* <li><Link to="/">Home</Link></li> */}
-        <li><Link to="/handsontable">Handsontable</Link></li>
-        <li><Link to="/react-data-grid">AdazzleReactDataGrid</Link></li>
+      <section>
+        <a href="https://github.com/WranglHQ/handsontable_vs_reactdatagrid">https://github.com/WranglHQ/handsontable_vs_reactdatagrid</a>
         <p></p>
-      </ul>
-      <hr />
+        <h2>compare handsontable with adazzle's react-data-grid with different numbers of rows</h2>
+        <p>try 500,000</p>
+        <p>change spreadsheet after changing number of rows to re-render the components</p>
+        <input
+          style={{ marginLeft: '40px', width: '250px' }}
+          type='text'
+          placeholder="num rows (default 50,000)"
+          id="numrowsinputid">
+        </input>
+        <p></p>
+        <ul>
+          {/* <li><Link to="/">Home</Link></li> */}
+          <li><Link to="/handsontable">Handsontable</Link></li>
+          <li><Link to="/react-data-grid">AdazzleReactDataGrid</Link></li>
+          <p></p>
+        </ul>
+      </section>
+      <hr style={{ margin: 0 }} />
+      <section>
 
-      <Switch>
-        <Route exact path="/"><Home /></Route>
-        <Route path="/handsontable"><ParentHandsontable /></Route>
-        <Route path="/react-data-grid"><ParentReactDataGrid /></Route>
-      </Switch>
+        <Switch>
+          <Route exact path="/"><Home /></Route>
+          <Route path="/handsontable"><ParentHandsontable /></Route>
+          <Route path="/react-data-grid"><ParentReactDataGrid /></Route>
+        </Switch>
+      </section>
+
     </Router>
   );
 }
@@ -31,7 +44,7 @@ export default function BasicExample() {
 function Home() {
   return (
     <div>
-      <h2>nothing here</h2>
+      {/* <h2>compare handsontable with react-data-grid with different numbers of rows. try 500,000</h2> */}
     </div>
   );
 }
