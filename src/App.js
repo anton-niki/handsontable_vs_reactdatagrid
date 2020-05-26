@@ -9,7 +9,7 @@ export default function BasicExample() {
   return (
     <Router>
       <section>
-        <a target="_blank" href="https://github.com/WranglHQ/handsontable_vs_reactdatagrid">https://github.com/WranglHQ/handsontable_vs_reactdatagrid</a>
+        <p style={{textAlign:'right'}}><a target="_blank" href="https://github.com/WranglHQ/handsontable_vs_reactdatagrid">https://github.com/WranglHQ/handsontable_vs_reactdatagrid</a></p>
         <p></p>
         <h2>compare handsontable with adazzle's react-data-grid with different numbers of rows</h2>
         <p>try 500,000</p>
