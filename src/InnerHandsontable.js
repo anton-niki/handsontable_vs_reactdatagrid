@@ -16,6 +16,13 @@ class InnerHandsontable extends React.Component {
                 autoColumnSize={false}
                 autoRowSize={false}
                 viewportRowRenderingOffset={0}
+                manualColumnResize={true}
+                manualRowResize={true}
+                manualColumnMove={true}
+                manualRowMove={true}
+                columnSorting={true}
+                contextMenu={true}
+                dropdownMenu={true}
             />
         );
     }
