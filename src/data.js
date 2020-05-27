@@ -14,8 +14,12 @@ const getRows = (numRows) => {
 }
 
 
-const getData = () => {
+const getData = (nr) => {
+
     let numRows = NUM_ROWS;
+    if (nr !== undefined) {
+        numRows = nr;
+    }
     let el = document.getElementById('numrowsinputid');
     if (el) {
         let inputValue = el.value;

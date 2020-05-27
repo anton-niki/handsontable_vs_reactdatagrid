@@ -3,26 +3,31 @@ import { HotTable } from '@handsontable/react';
 
 class InnerHandsontable extends React.Component {
     render() {
+        // const this_props_dataprops_rows = this.props.dataprop.rows;
         return (
-            <HotTable
+            <HotTable 
                 data={this.props.dataprop.rows}
-                height={320}
-                rowHeights={23}
-                rowHeaders={true}
-                colHeaders={true}
-                licenseKey={"non-commercial-and-evaluation"}
-                id={"hot"}
-                colWidths= {[30, 45, 60, 75]}
-                autoColumnSize={false}
-                autoRowSize={false}
-                viewportRowRenderingOffset={0}
-                manualColumnResize={true}
-                manualRowResize={true}
-                manualColumnMove={true}
-                manualRowMove={true}
-                columnSorting={true}
-                contextMenu={true}
-                dropdownMenu={true}
+                settings={this.props.settings}
+                // height={400}
+                // rowHeights={23}
+                // rowHeaders={true}
+                // colHeaders={true}
+                // licenseKey={"non-commercial-and-evaluation"}
+                // id={"hot"}
+                // colWidths= {[30, 45, 60, 75]}
+                // autoColumnSize={false}
+                // autoRowSize={false}
+                // viewportRowRenderingOffset={0}
+                // manualColumnResize={true}
+                // manualRowResize={true}
+                // //one of these...
+                // // manualColumnMove={true}  //serious performance hit
+                // manualRowMove={true}
+
+                // // columnSorting={true} //serious performance hit
+                // contextMenu={true}
+                // dropdownMenu={true}
+                // width={'300px'}
             />
         );
     }

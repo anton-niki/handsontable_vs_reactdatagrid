@@ -8,7 +8,7 @@ class InnerReactDataGrid extends React.Component {
             <DataGrid
                 columns={this.props.dataprop.columns}
                 rows={this.props.dataprop.rows}
-                height={300}
+                height={454}
             />
         );
     }
