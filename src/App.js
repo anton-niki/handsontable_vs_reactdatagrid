@@ -12,11 +12,11 @@ export default function BasicExample() {
         <p style={{ textAlign: 'right' }}><a target="_blank" href="https://github.com/WranglHQ/handsontable_vs_reactdatagrid">https://github.com/WranglHQ/handsontable_vs_reactdatagrid</a></p>
         <p></p>
         <h2>compare handsontable with adazzle's react-data-grid with a ton of rows</h2>
-        <p>try 500,000 or 5,000,000</p>
+        <p>try 50,000 or 500,000 or 5,000,000 (handsontable will prob crash by 500,000)</p>
         <input
           style={{ width: '250px' }}
           type='text'
-          placeholder="num rows (default 50,000)"
+          placeholder="num rows (default 5,000)"
           id="numrowsinputid">
         </input>
         <p>change spreadsheet after changing number of rows to re-render the components:</p>
