@@ -44,7 +44,7 @@ class HandsontableRedux extends React.Component {
         this.hotTableComponent = React.createRef();
 
         reduxStore.subscribe(this.updateReduxPreview);
-        reduxStore.subscribe(this.render);   //typo, tell hot ppl? was missing 'this'
+        reduxStore.subscribe(this.render);   //typo from HOT docs, was missing 'this'
     }
 
     get reduxHotSettings() {
