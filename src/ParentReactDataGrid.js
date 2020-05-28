@@ -2,6 +2,25 @@ import React from "react";
 import 'handsontable/dist/handsontable.full.css';
 import getData from './data.js';
 import InnerReactDataGrid from "./InnerReactDataGrid";
+import Stopwatch from "./Stopwatch.js";
+// import runTimer from "./runTimer.js";
+
+function runTimer() {
+    const startTime = new Date();
+
+    document.getElementById('stopwatchPre').innerText = JSON.stringify('⏳').toString().padEnd(5, ' ') + 'ms'
+    const getFirstCellValue = () => document.getElementsByClassName('rdg-cell')[4].innerText;
+    const firstCellInitValue = getFirstCellValue();
+    const el = document.getElementById('stopwatchPre');
+    const interval = setInterval(() => {
+        console.log('here');
+        el.innerText = JSON.stringify(new Date() - startTime).toString().padEnd(5, ' ') + 'ms'
+        if (firstCellInitValue !== getFirstCellValue()) {
+            clearInterval(interval);
+        }
+    });
+}
+
 
 class ParentReactDataGrid extends React.Component {
 
@@ -11,16 +30,25 @@ class ParentReactDataGrid extends React.Component {
     }
 
     updateData = () => {
-        const rows = this.state.data.rows;
-        const row0 = { ...rows[0] };
-        row0.id = row0.id + 1;
-        this.setState({ data: { ...this.state.data, rows: [row0, ...rows.splice(1)] } });
+        document.getElementById('stopwatchPre').innerText = '⏳'
+
+        setTimeout(() => {
+            runTimer();
+            const rows = this.state.data.rows;
+            const row0 = { ...rows[0] };
+            row0.id = row0.id + 1;
+            this.setState({ data: { ...this.state.data, rows: [row0, ...rows.splice(1)] } });
+        }, 5);
     }
 
     render() {
+        console.log('ReactDataGrid data:');
+        console.log(this.state.data);
         return (
             <div>
-                <h2>Adazzle's react-data-grid</h2>
+                <p>
+                    <span style={{ fontSize: '24px' }}>Adazzle's react-data-grid </span><span style={{ color: 'gray' }}> rows as objects array in React state</span>
+                </p>
                 {/* <div>num rows: {this.state.data.numRows} </div>
                 <button style={{ height: '50px', width: '100px', margin: '10px', cursor: 'pointer' }} onClick={this.updateData}>
                     <span>change first cell</span>
@@ -52,6 +80,12 @@ class ParentReactDataGrid extends React.Component {
                     </span>
                     <span> &nbsp; 10M only seems to load 960,000 rows?</span>
                 </span>
+                {/* <div><Stopwatch ref={node => { this.stopwatch = node; }}></Stopwatch></div> */}
+
+                <div><pre id="stopwatchPre" style={{ margin: 0, display: 'inline-block', backgroundColor: 'blue', color: 'white', fontWeight: 'bold', height: '20px', padding: '5px' }}>
+                    {JSON.stringify(0).toString().padEnd(5, ' ')} ms
+                </pre></div>
+
 
                 <InnerReactDataGrid dataprop={this.state.data}></InnerReactDataGrid>
             </div>

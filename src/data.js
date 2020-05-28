@@ -13,8 +13,21 @@ const getRows = (numRows) => {
     return rows;
 }
 
+const getRows2dArray = (numRows) => {
+    const rows = [];
+    for (let i = 0; i < numRows; i++) {
+        rows.push([
+            i,
+            i + 1,
+            i * 10,
+            i * 100
+        ])
+    }
+    return rows;
+}
 
-const getData = (nr) => {
+
+const getData = (nr, as2dArray = false) => {
 
     let numRows = NUM_ROWS;
     if (nr !== undefined) {
@@ -40,7 +53,7 @@ const getData = (nr) => {
             { key: 'c2', name: 'c2' },
             { key: 'c3', name: 'c3' }
         ],
-        rows: getRows(numRows),
+        rows: as2dArray ? getRows2dArray(numRows) : getRows(numRows),
         numRows: numRows
     }
 }
