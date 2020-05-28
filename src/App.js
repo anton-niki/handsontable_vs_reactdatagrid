@@ -36,9 +36,9 @@ export default function BasicExample() {
           <p></p>
           <li><em><Link to="/handsontable-data-as-window-object">Handsontable </Link>  (rows as global objects array)</em></li>
           <li><em><Link to="/handsontable-data-as-2dArray-window-object">Handsontable </Link>  (rows as global 2d array)</em></li>
-          <p></p>
-          <Link to="/handsontable_redux"><span style={{ color: 'gray' }}>Handsontable redux</span></Link><span style={{ color: 'gray' }}> (from their <a target="_blank" href="https://handsontable.com/docs/7.4.2/frameworks-wrapper-for-react-redux-example.html">docs.</a> doesnt work.)</span>
-          <p></p>
+          {/* <p></p> */}
+          {/* <Link to="/handsontable_redux"><span style={{ color: 'gray' }}>Handsontable redux</span></Link><span style={{ color: 'gray' }}> (from their <a target="_blank" href="https://handsontable.com/docs/7.4.2/frameworks-wrapper-for-react-redux-example.html">docs.</a> doesnt work.)</span> */}
+          {/* <p></p> */}
         </ul>
       </section>
       <hr style={{ margin: 0 }} />
@@ -48,7 +48,7 @@ export default function BasicExample() {
           <Route exact path="/"><Home /></Route>
           <Route path="/handsontable"><ParentHandsontable /></Route>
           <Route path="/react-data-grid"><ParentReactDataGrid /></Route>
-          <Route path="/handsontable_redux"><HandsontableRedux /></Route>
+          {/* <Route path="/handsontable_redux"><HandsontableRedux /></Route> */}
           <Route path="/handsontable-data-as-window-object"><HandsontableGlobalData /></Route>
           <Route path="/handsontable-data-as-2dArray-window-object"><HandsontableGlobal2dArrayData /></Route>
           <Route path="/stopwatch"><Stopwatch /></Route>
