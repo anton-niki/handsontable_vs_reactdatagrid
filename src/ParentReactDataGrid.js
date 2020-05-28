@@ -25,7 +25,7 @@ function runTimer() {
 class ParentReactDataGrid extends React.Component {
 
     state = {
-        numRows: 5000,
+        numRows: 10000,
         data: getData(5000)
     }
 

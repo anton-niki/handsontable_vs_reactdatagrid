@@ -38,7 +38,7 @@ function runTimer() {
 class HandsontableGlobalData extends React.Component {
 
     state = {
-        numRows: 1000000,
+        numRows: 10000,
         // data: getData(5000),
         hotSettingsStr: `//<HotTable> settings object:
 {

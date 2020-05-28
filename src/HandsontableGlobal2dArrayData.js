@@ -44,7 +44,7 @@ function runTimer() {
 class HandsontableGlobal2dArrayData extends React.Component {
 
     state = {
-        numRows: 1000000,
+        numRows: 10000,
         hotSettingsStr: `//<HotTable> settings object:
 {
     // data:this.props.dataprops.rows,
