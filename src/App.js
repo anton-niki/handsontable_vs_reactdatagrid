@@ -30,6 +30,7 @@ export default function BasicExample() {
         <p>change spreadsheet after changing number of rows to re-render the components:</p> */}
         <ul>
           {/* <li><Link to="/">Home</Link></li> */}
+          <li><Link to="/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🏠&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Link></li>
           <li><Link to="/handsontable">Handsontable </Link> (rows as objects in component prop)</li>
           <li><Link to="/react-data-grid">AdazzleReactDataGrid </Link>  (rows as objects in component prop)</li>
           <p></p>
@@ -59,7 +60,23 @@ export default function BasicExample() {
 }
 
 function Home() {
-  return (<div></div>);
+  return (<div>
+    <p>hi, welcome to handsontable-vs-reactdatagrid.onrender.com 👋</p>
+    <p>i've been trying to decide bewteen react-data-grid and handsontable for a web project that
+       might involve huge data sets, so i created this website to test the two</p>
+    <p>these are my main observations:</p>
+    <ul>
+      <li>react-data-grid is almost 200 times faster than Handsontable for large datasets (1M+ rows)</li>
+      <li>but react-data-grid has virtually no built-in features</li>
+      <li>Handsontable has a significant memory leak.</li>
+    </ul>
+    <p>You can see the memory leak yourself by going to one of the Handsontable pages,
+    setting num rows to 100k or 1M, and then clicking "change first cell" a few times.
+      you'll notice the clock time significantly increase.</p>
+    <p></p>
+    <p>Handsontable unfortunately seems unsuitable for large datasets, but excellent for small ones.</p>
+
+  </div>);
 }
 
 function About() {
